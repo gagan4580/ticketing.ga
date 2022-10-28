@@ -4,7 +4,8 @@ on:
   pull_request
 jobs:
   build:
-    runs-on: ubutu-latest
+    runs-on: ubuntu-latest
     steps:
        - uses: actions/checkout@v2
-       - run: cd auth && npm install && npm run test:ci
+       - run: cd auth && docker build -t gagan2756450/auth .
+       - run: docker push gagan27564580/auth
