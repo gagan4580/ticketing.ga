@@ -7,5 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
        - uses: actions/checkout@v2
-       - run: cd auth && docker build -t gagan2756450/auth .
-       - run: docker push gagan27564580/auth
+       - run: cd auth && npm install
