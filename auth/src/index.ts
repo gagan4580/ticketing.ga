@@ -28,12 +28,13 @@ const start = async () => {
   try {
     await mongoose.connect("mongodb://auth-mongo-srv:27017/auth", {});
     console.log("Connected to MongoDb");
+    console.log("Creating a user");
   } catch (err) {
     console.error(err);
   }
 
   app.listen(3000, () => {
-    console.log("Listening on port 3000!!!!!!!!");
+    console.log("Connected on port 3000!!!!");
   });
 };
 
